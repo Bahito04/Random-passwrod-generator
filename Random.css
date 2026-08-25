@@ -67,6 +67,7 @@ input{
     display: flex;
     justify-content: center;
     font-size: 25px;
+    transition: 0.4s;
 }
     .active.alert-container{
         left: -320px;
