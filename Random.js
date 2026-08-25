@@ -1,4 +1,5 @@
 const btnEl = document.querySelector(".btn")
+const inputEl = document.getElementById("input")
 
 btnEl.addEventListener("click", ()=>{
     createPassword()
@@ -15,4 +16,5 @@ function createPassword(){
         
         
     }
+    inputEl.value = password 
 }
