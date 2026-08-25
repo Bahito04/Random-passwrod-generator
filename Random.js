@@ -1,9 +1,13 @@
 const btnEl = document.querySelector(".btn")
 const inputEl = document.getElementById("input")
+const copyIconEl = document.querySelector(".fa-copy")
 
 btnEl.addEventListener("click", ()=>{
     createPassword()
 }) 
+copyIconEl.addEventListener("click", () =>{
+    copyPassword()
+})
 function createPassword(){
     const chars = "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     const passwordLength = 14
@@ -17,4 +21,10 @@ function createPassword(){
         
     }
     inputEl.value = password 
+
+}
+function copyPassword(){
+    inputEl.select()
+    inputEl.setSelectionRange(0,9999)
+    navigator.clipboard.writeText(inputEl.value)
 }
