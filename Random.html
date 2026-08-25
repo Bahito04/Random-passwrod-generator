@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="Random.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="Random.js"></script>
+    <script src="Random.js" defer></script>
    </head>
 <body>
    <div class="password-container">
@@ -16,7 +16,9 @@
 <i class="fa-solid fa-copy"></i>
 </div>
 <button class="btn">Generate</button>
-<div class="alert-container"></div> 
+<div class="alert-container "> <!--active class need to be added to hide the password copied container-->
+   <span id="pass">Password Copied!</span> 
+</div> 
    </div>
 </body>
 
