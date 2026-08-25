@@ -6,13 +6,18 @@ const alertContainerEl = document.querySelector(".alert-container")
 btnEl.addEventListener("click", ()=>{
     createPassword()
 }) 
-copyIconEl.addEventListener("click", () =>{
-    copyPassword()
-    alertContainerEl.classList.remove("active")
+copyIconEl.addEventListener("click", () => {
+    copyPassword();
+    if (inputEl.value) {
+         alertContainerEl.classList.remove("active");
     setTimeout(()=>{
         alertContainerEl.classList.add("active")
     } ,2000)
+}
 })
+        
+    
+   
 function createPassword(){
     const chars = "0123456789abcdefghijklmnopqrstuvwxtz!@#$%^&*()_+?:{}[]ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     const passwordLength = 14
